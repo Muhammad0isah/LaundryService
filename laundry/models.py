@@ -25,3 +25,12 @@ class Record(models.Model):
         ('Kano', 'Kano'),
     )
     city = models.CharField(choices=state_list, max_length=40)
+
+
+class Enquiry(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=100)
+    def __str__(self):
+        return self.email
+    subject = models.CharField(max_length=100)
+    message = models.TextField()

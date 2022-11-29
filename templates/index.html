@@ -89,10 +89,10 @@
                      <td>Information Technology</td>
                 </tr>
                 <tr>
-                <td>6</td>
-                 <td>Aminu Idris</td>
-                 <td>CST/19/IFT/00415</td>
-                  <td>Information Technology</td>
+                    <td>6</td>
+                    <td>Aminu Idris</td>
+                     <td>CST/19/IFT/00415</td>
+                     <td>Information Technology</td>
              </tr>
         </table>
         <!-- End of Table -->
@@ -114,7 +114,7 @@
                                 <img src="{% static 'assets/img/icon/services-icon1.svg' %}" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="services.html">We collect your clothes</a></h5>
+                                <h5><a href="{% url 'services'%}">We collect your clothes</a></h5>
                                 <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!</p>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
                                 <img src="{% static 'assets/img/icon/services-icon2.svg' %}" alt="">
                             </div>
                             <div class="cat-cap">
-                                <h5><a href="services.html">Wash your clothes</a></h5>
+                                <h5><a href="{% url 'services'%}">Wash your clothes</a></h5>
                                 <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!</p>
                             </div>
                         </div>
@@ -170,7 +170,7 @@
                                     <img src="{% static 'assets/img/icon/offers-icon1.png' %}" alt="">
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="services.html">Cloth laundry</a></h5>
+                                    <h5><a href="{% url 'services' %}">Cloth laundry</a></h5>
                                     <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!!</p>
                                 </div>
                             </div>
@@ -184,7 +184,7 @@
                                     <img src="{% static 'assets/img/icon/offers-icon1.png' %}" alt="">
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="services.html">Cloth ironing</a></h5>
+                                    <h5><a href="{% url 'services' %}">Cloth ironing</a></h5>
                                     <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!!</p>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@
         <!-- Offer-services End  -->
         <!--? Want To work -->
         <section class="container">
-            <section class="wantToWork-area" data-background="assets/img/gallery/section_bg01.png' %}">
+            <section class="wantToWork-area" data-background="{% static 'assets/img/gallery/section_bg01.png' %}">
                 <div class="wants-wrapper w-padding2">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-xl-8 col-lg-9 col-md-7">

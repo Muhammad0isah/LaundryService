@@ -1,7 +1,7 @@
 from types import FrameType
 from django.db.models.expressions import F
-from django.shortcuts import render
-
+from django.shortcuts import render,redirect
+from .form import EnquiryForm
 from .models import Record
 
 
@@ -15,7 +15,14 @@ def about(request):
 
 
 def services(request):
-    return render(request, 'services.html')
+    enquiry = EnquiryForm()
+    if request.method == 'POST':
+        enquiry = EnquiryForm(request.POST)
+        if enquiry.is_valid():
+            enquiry.save()
+            return redirect('services')
+    context = {'enquiry':enquiry}
+    return render(request, 'services.html',context)
 
 
 def records(request):
